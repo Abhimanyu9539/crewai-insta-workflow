@@ -1,0 +1,135 @@
+research_trends_task:
+  description: >
+    Research current trends, hashtags, and viral content patterns for the topic: {topic}.
+    Use SerperDevTool to search for trending hashtags, popular content formats, competitor 
+    insights, and cultural moments related to {topic}. Focus on identifying what content 
+    is performing well for this specific topic and what engagement strategies are working.
+    
+    Research areas for {topic}:
+    - Trending hashtags with high engagement potential
+    - Viral content formats and structures currently performing well
+    - Competitor analysis and successful post patterns
+    - Cultural moments and seasonal trends to leverage
+    - Optimal posting times and engagement strategies
+    - Content gaps and opportunities in this niche
+  expected_output: >
+    A comprehensive trend research report for {topic} containing:
+    1. List of 15-20 trending hashtags with relevance scores for {topic}
+    2. 5-10 viral content patterns currently working for similar topics
+    3. 3-5 competitor insights with engagement analysis
+    4. Current cultural moments and seasonal trends related to {topic}
+    5. Recommended posting times and strategies
+    6. Content gap analysis and opportunities for {topic}
+    7. Overall trend score and recommendations
+  agent: trend_researcher
+
+analyze_account_task:
+  description: >
+    Analyze the Instagram account @{target_account} to understand their content style, voice, 
+    posting patterns, and engagement strategies. Use ScrapeWebsiteTool to gather 
+    data from their public Instagram page and posts.
+    
+    Extract and analyze from @{target_account}:
+    - Writing style and tone patterns from recent captions
+    - Common themes and content categories
+    - Hashtag strategies and patterns
+    - Content formats used (single posts, carousels, reels)
+    - Engagement patterns and successful post elements
+    - Posting frequency and timing patterns
+    - Brand voice characteristics and personality traits
+  expected_output: >
+    A detailed account analysis report for @{target_account} containing:
+    1. Account overview (followers, posting frequency, content types)
+    2. Writing style analysis (tone, length, structure patterns)
+    3. Content theme categorization and frequency
+    4. Hashtag strategy and most-used tags by @{target_account}
+    5. Engagement pattern analysis from recent posts
+    6. Brand voice characteristics and personality traits
+    7. Recommended mimicking strategies and key elements to adopt
+    8. Sample captions that represent their style
+  agent: trend_researcher
+
+create_content_variations_task:
+  description: >
+    Create {num_variations} engaging Instagram caption variations for the topic: {topic}
+    using {brand_voice} brand voice and optimized for {content_type} format.
+    Generate diverse approaches with different hooks, styles, and call-to-actions based on 
+    the provided trend research to maximize engagement potential.
+    
+    Create variations for {topic} that include:
+    - Different hook styles (question, bold statement, story, contradiction)
+    - {brand_voice} brand voice consistently throughout
+    - Content optimized for {content_type} format
+    - Multiple engagement strategies (educational, entertaining, inspiring)
+    - Strong calls-to-action that drive interaction
+    - Natural integration of trending elements from research
+    - Target length: {content_length} format
+  expected_output: >
+    A collection of {num_variations} caption variations for {topic} containing:
+    1. Each variation clearly labeled (Variation 1, 2, etc.)
+    2. Content written in {brand_voice} brand voice
+    3. Optimized for {content_type} format
+    4. Each variation should include:
+       - Hook strength score (1-10)
+       - Estimated engagement level (low/medium/high)
+       - Target emotion or response
+       - Specific call-to-action
+       - Why this variation works for {topic}
+  agent: creative_writer
+
+mimic_account_content_task:
+  description: >
+    Create {num_variations} Instagram content variations that mimic the style of @{target_account}
+    for the topic: {topic}. Use the account analysis to replicate their authentic voice 
+    and patterns while creating completely original content.
+    
+    Focus on replicating @{target_account}'s style for {topic}:
+    - Writing style and tone patterns identified in the analysis
+    - Content structure and flow typical of their posts
+    - Hashtag usage patterns and strategies they use
+    - Engagement strategies commonly used by @{target_account}
+    - Content format preferences they typically use
+    - Brand voice characteristics and personality traits
+    - Hook and call-to-action styles they favor
+  expected_output: >
+    A collection of {num_variations} content variations mimicking @{target_account} for {topic}:
+    1. Each variation clearly labeled and explained
+    2. Content that authentically matches @{target_account}'s style
+    3. All content focused on the topic: {topic}
+    4. Each variation should include:
+       - Style similarity score to @{target_account} (1-10)
+       - Explanation of which elements were replicated
+       - How the content relates to {topic}
+       - Recommended posting approach based on their patterns
+       - Hashtag strategy matching their typical usage
+  agent: creative_writer
+
+optimize_content_task:
+  description: >
+    Refine and optimize the creative content variations for {topic} to maximize Instagram 
+    performance. Ensure the content maintains {brand_voice} brand voice while being 
+    optimized for {content_type} format and maximum engagement potential.
+    
+    Optimization areas for {topic} content:
+    - Maintain {brand_voice} brand voice consistency throughout
+    - Instagram algorithm optimization for {content_type} format
+    - Strategic hashtag selection relevant to {topic}
+    - Accessibility improvements (inclusive language, alt text suggestions)
+    - Performance prediction and engagement optimization
+    - Content compliance and Instagram guideline adherence
+    - Hook strength and call-to-action effectiveness for {topic}
+  expected_output: >
+    A finalized, optimized Instagram post package for {topic} containing:
+    1. Primary recommended caption (fully optimized for {topic})
+    2. Alternative caption option (different strategic approach)
+    3. Strategically organized hashtag sets for {topic}:
+       - Primary hashtags (3-5 main topic tags)
+       - Secondary hashtags (5-10 supporting tags)
+       - Trending hashtags (2-5 current trend tags)
+       - Niche hashtags (3-7 community-specific tags for {topic})
+    4. Performance predictions for {topic} content:
+       - Engagement potential score (1-10)
+       - Viral potential assessment
+       - Best posting time recommendation
+       - Target audience reach estimate
+  agent: style_editor
